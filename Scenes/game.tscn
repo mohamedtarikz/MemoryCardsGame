@@ -1,0 +1,139 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbadxviaiy500"]
+
+[ext_resource type="PackedScene" uid="uid://5qor5fvjlkr1" path="res://Scenes/card.tscn" id="1_ntnw3"]
+[ext_resource type="Script" path="res://Scripts/game.gd" id="1_rxshs"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_rxshs")
+metadata/_edit_vertical_guides_ = [101.0, 1041.0, 197.0, 285.0, 381.0, 473.0, 561.0, 654.0, 752.0, 858.0, 948.0, 61.0, 44.0, 225.0, 60.0, 112.0]
+metadata/_edit_horizontal_guides_ = [111.0, 565.0, 283.0, 420.0, 215.0]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1148.0
+offset_bottom = 649.0
+color = Color(0.0667506, 0.590107, 0.521715, 1)
+
+[node name="Cards" type="Node" parent="."]
+
+[node name="Card" parent="Cards" instance=ExtResource("1_ntnw3")]
+z_index = 9
+position = Vector2(96, 206)
+
+[node name="Card2" parent="Cards" instance=ExtResource("1_ntnw3")]
+z_index = 9
+position = Vector2(204, 209)
+
+[node name="Card3" parent="Cards" instance=ExtResource("1_ntnw3")]
+z_index = 9
+position = Vector2(315, 208)
+
+[node name="Card4" parent="Cards" instance=ExtResource("1_ntnw3")]
+z_index = 9
+position = Vector2(423, 211)
+
+[node name="Card5" parent="Cards" instance=ExtResource("1_ntnw3")]
+z_index = 9
+position = Vector2(530, 213)
+
+[node name="Card6" parent="Cards" instance=ExtResource("1_ntnw3")]
+z_index = 9
+position = Vector2(638, 211)
+
+[node name="Card7" parent="Cards" instance=ExtResource("1_ntnw3")]
+z_index = 9
+position = Vector2(749, 211)
+
+[node name="Card8" parent="Cards" instance=ExtResource("1_ntnw3")]
+z_index = 9
+position = Vector2(858, 212)
+
+[node name="Card9" parent="Cards" instance=ExtResource("1_ntnw3")]
+z_index = 9
+position = Vector2(962, 211)
+
+[node name="Card10" parent="Cards" instance=ExtResource("1_ntnw3")]
+z_index = 9
+position = Vector2(1065, 211)
+
+[node name="Card11" parent="Cards" instance=ExtResource("1_ntnw3")]
+z_index = 9
+position = Vector2(96, 361)
+
+[node name="Card12" parent="Cards" instance=ExtResource("1_ntnw3")]
+z_index = 9
+position = Vector2(204, 364)
+
+[node name="Card13" parent="Cards" instance=ExtResource("1_ntnw3")]
+z_index = 9
+position = Vector2(315, 363)
+
+[node name="Card14" parent="Cards" instance=ExtResource("1_ntnw3")]
+z_index = 9
+position = Vector2(423, 366)
+
+[node name="Card15" parent="Cards" instance=ExtResource("1_ntnw3")]
+z_index = 9
+position = Vector2(530, 368)
+
+[node name="Card16" parent="Cards" instance=ExtResource("1_ntnw3")]
+z_index = 9
+position = Vector2(638, 366)
+
+[node name="Card17" parent="Cards" instance=ExtResource("1_ntnw3")]
+z_index = 9
+position = Vector2(749, 366)
+
+[node name="Card18" parent="Cards" instance=ExtResource("1_ntnw3")]
+z_index = 9
+position = Vector2(858, 367)
+
+[node name="Card19" parent="Cards" instance=ExtResource("1_ntnw3")]
+z_index = 9
+position = Vector2(962, 366)
+
+[node name="Card20" parent="Cards" instance=ExtResource("1_ntnw3")]
+z_index = 9
+position = Vector2(1065, 366)
+
+[node name="Card21" parent="Cards" instance=ExtResource("1_ntnw3")]
+z_index = 9
+position = Vector2(96, 516)
+
+[node name="Card22" parent="Cards" instance=ExtResource("1_ntnw3")]
+z_index = 9
+position = Vector2(204, 519)
+
+[node name="Card23" parent="Cards" instance=ExtResource("1_ntnw3")]
+z_index = 9
+position = Vector2(315, 518)
+
+[node name="Card24" parent="Cards" instance=ExtResource("1_ntnw3")]
+z_index = 9
+position = Vector2(423, 521)
+
+[node name="Card25" parent="Cards" instance=ExtResource("1_ntnw3")]
+z_index = 9
+position = Vector2(530, 523)
+
+[node name="Card26" parent="Cards" instance=ExtResource("1_ntnw3")]
+z_index = 9
+position = Vector2(638, 521)
+
+[node name="Card27" parent="Cards" instance=ExtResource("1_ntnw3")]
+z_index = 9
+position = Vector2(749, 521)
+
+[node name="Card28" parent="Cards" instance=ExtResource("1_ntnw3")]
+z_index = 9
+position = Vector2(858, 522)
+
+[node name="Card29" parent="Cards" instance=ExtResource("1_ntnw3")]
+z_index = 9
+position = Vector2(962, 521)
+
+[node name="Card30" parent="Cards" instance=ExtResource("1_ntnw3")]
+z_index = 9
+position = Vector2(1065, 521)
