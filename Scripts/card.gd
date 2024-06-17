@@ -6,8 +6,11 @@ const FRONT = preload("res://Assets/imgs/card/front_card.png")
 
 var flp = 0
 
+signal text
+
 func _on_button_pressed():
 	flip()
+	text.emit(sprite.texture)
 
 func flip():
 	if flp:

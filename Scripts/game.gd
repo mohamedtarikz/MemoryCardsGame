@@ -1,6 +1,10 @@
 extends Node2D
 
 @onready var cards = $Cards
+@onready var timer = $Timer
+@onready var label = $CanvasLayer/Label
+@onready var color_rect_2 = $ColorRect2
+@onready var label_2 = $ColorRect2/Label2
 
 var crs = []
 
@@ -22,9 +26,12 @@ const WATERMELON = preload("res://Assets/imgs/pics/watermelon.png")
 
 var pcs = [APPLE,APPLE,BANANA,BANANA,CAT,CAT,DIAMOND,DIAMOND,DOG,DOG,DUCK,DUCK,MAN,MAN,MOON,MOON,PAC,PAC,PLANE,PLANE,PXL_HEART,PXL_HEART,RABBIT,RABBIT,ROSE,ROSE,TREE,TREE,WATERMELON,WATERMELON]
 
+var scr = 0
+
 func _ready():
 	for child in cards.get_children():
 		crs.append(child)
+		child.text.connect(score)
 	distribute()
 
 func set_card(crd,text):
@@ -39,3 +46,53 @@ func distribute():
 		idx = randi()%(pcs.size())
 		set_card(card,pcs[idx])
 		pcs.remove_at(idx)
+
+var cnt = 0
+var last_card
+var succeed
+var num_success = 0
+
+func score(text):
+	if cnt == 0:
+		last_card = text
+	elif cnt == 1:
+		if last_card == text:
+			succeed = 1
+			timer.start()
+		else:
+			succeed = 0
+			timer.start()
+	cnt += 1
+	cnt %= 2
+
+func success():
+	num_success += 1
+	scr += 10
+	for crd in crs:
+		if crd.flp:
+			if crd.visible:
+				crd.visible = 0
+	set_score()
+	if num_success == 15:
+		color_rect_2.visible = 1
+		label_2.text = "You Scored " + str(int(scr))
+
+func fail():
+	scr -= 5
+	if scr < 0:
+		scr = 0
+	for crd in crs:
+		if crd.flp:
+			if crd.visible:
+				crd.flip()
+	set_score()
+
+
+func _on_timer_timeout():
+	if succeed:
+		success()
+	else:
+		fail()
+
+func set_score():
+	label.text = "Score: " + str(int(scr))
