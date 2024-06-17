@@ -5,135 +5,159 @@
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_rxshs")
-metadata/_edit_vertical_guides_ = [101.0, 1041.0, 197.0, 285.0, 381.0, 473.0, 561.0, 654.0, 752.0, 858.0, 948.0, 61.0, 44.0, 225.0, 60.0, 112.0]
-metadata/_edit_horizontal_guides_ = [111.0, 565.0, 283.0, 420.0, 215.0]
+metadata/_edit_vertical_guides_ = [101.0, 1041.0, 197.0, 285.0, 381.0, 473.0, 561.0, 654.0, 752.0, 858.0, 948.0, 61.0, 44.0, 225.0, 60.0, 112.0, 1124.0, 1152.0, 136.0]
+metadata/_edit_horizontal_guides_ = [111.0, 565.0, 283.0, 420.0, 220.0]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-offset_right = 1148.0
+offset_right = 1150.0
 offset_bottom = 649.0
 color = Color(0.0667506, 0.590107, 0.521715, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 21.0
+offset_top = 19.0
+offset_right = 169.0
+offset_bottom = 88.0
+theme_override_font_sizes/font_size = 50
+text = "Score: 0"
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
+z_index = 1
+offset_right = 1152.0
+offset_bottom = 649.0
+color = Color(0.0509804, 0.0509804, 0.0509804, 0.8)
+
+[node name="Label" type="Label" parent="ColorRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -211.5
+offset_top = -160.5
+offset_right = 211.5
+offset_bottom = -23.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0.65098, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "You Win!"
+
+[node name="Label2" type="Label" parent="ColorRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.5
+offset_top = -21.0
+offset_right = 94.5
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "You Scored X"
 
 [node name="Cards" type="Node" parent="."]
 
 [node name="Card" parent="Cards" instance=ExtResource("1_ntnw3")]
-z_index = 9
-position = Vector2(96, 206)
+position = Vector2(31, 150)
 
 [node name="Card2" parent="Cards" instance=ExtResource("1_ntnw3")]
-z_index = 9
-position = Vector2(204, 209)
+position = Vector2(141, 150)
 
 [node name="Card3" parent="Cards" instance=ExtResource("1_ntnw3")]
-z_index = 9
-position = Vector2(315, 208)
+position = Vector2(251, 150)
 
 [node name="Card4" parent="Cards" instance=ExtResource("1_ntnw3")]
-z_index = 9
-position = Vector2(423, 211)
+position = Vector2(361, 150)
 
 [node name="Card5" parent="Cards" instance=ExtResource("1_ntnw3")]
-z_index = 9
-position = Vector2(530, 213)
+position = Vector2(471, 150)
 
 [node name="Card6" parent="Cards" instance=ExtResource("1_ntnw3")]
-z_index = 9
-position = Vector2(638, 211)
+position = Vector2(581, 150)
 
 [node name="Card7" parent="Cards" instance=ExtResource("1_ntnw3")]
-z_index = 9
-position = Vector2(749, 211)
+position = Vector2(691, 150)
 
 [node name="Card8" parent="Cards" instance=ExtResource("1_ntnw3")]
-z_index = 9
-position = Vector2(858, 212)
+position = Vector2(801, 150)
 
 [node name="Card9" parent="Cards" instance=ExtResource("1_ntnw3")]
-z_index = 9
-position = Vector2(962, 211)
+position = Vector2(911, 150)
 
 [node name="Card10" parent="Cards" instance=ExtResource("1_ntnw3")]
-z_index = 9
-position = Vector2(1065, 211)
+position = Vector2(1021, 150)
 
 [node name="Card11" parent="Cards" instance=ExtResource("1_ntnw3")]
-z_index = 9
-position = Vector2(96, 361)
+position = Vector2(31, 310)
 
 [node name="Card12" parent="Cards" instance=ExtResource("1_ntnw3")]
-z_index = 9
-position = Vector2(204, 364)
+position = Vector2(141, 310)
 
 [node name="Card13" parent="Cards" instance=ExtResource("1_ntnw3")]
-z_index = 9
-position = Vector2(315, 363)
+position = Vector2(251, 310)
 
 [node name="Card14" parent="Cards" instance=ExtResource("1_ntnw3")]
-z_index = 9
-position = Vector2(423, 366)
+position = Vector2(361, 310)
 
 [node name="Card15" parent="Cards" instance=ExtResource("1_ntnw3")]
-z_index = 9
-position = Vector2(530, 368)
+position = Vector2(471, 310)
 
 [node name="Card16" parent="Cards" instance=ExtResource("1_ntnw3")]
-z_index = 9
-position = Vector2(638, 366)
+position = Vector2(581, 310)
 
 [node name="Card17" parent="Cards" instance=ExtResource("1_ntnw3")]
-z_index = 9
-position = Vector2(749, 366)
+position = Vector2(691, 310)
 
 [node name="Card18" parent="Cards" instance=ExtResource("1_ntnw3")]
-z_index = 9
-position = Vector2(858, 367)
+position = Vector2(801, 310)
 
 [node name="Card19" parent="Cards" instance=ExtResource("1_ntnw3")]
-z_index = 9
-position = Vector2(962, 366)
+position = Vector2(911, 310)
 
 [node name="Card20" parent="Cards" instance=ExtResource("1_ntnw3")]
-z_index = 9
-position = Vector2(1065, 366)
+position = Vector2(1021, 310)
 
 [node name="Card21" parent="Cards" instance=ExtResource("1_ntnw3")]
-z_index = 9
-position = Vector2(96, 516)
+position = Vector2(31, 470)
 
 [node name="Card22" parent="Cards" instance=ExtResource("1_ntnw3")]
-z_index = 9
-position = Vector2(204, 519)
+position = Vector2(141, 470)
 
 [node name="Card23" parent="Cards" instance=ExtResource("1_ntnw3")]
-z_index = 9
-position = Vector2(315, 518)
+position = Vector2(251, 470)
 
 [node name="Card24" parent="Cards" instance=ExtResource("1_ntnw3")]
-z_index = 9
-position = Vector2(423, 521)
+position = Vector2(361, 470)
 
 [node name="Card25" parent="Cards" instance=ExtResource("1_ntnw3")]
-z_index = 9
-position = Vector2(530, 523)
+position = Vector2(471, 470)
 
 [node name="Card26" parent="Cards" instance=ExtResource("1_ntnw3")]
-z_index = 9
-position = Vector2(638, 521)
+position = Vector2(581, 470)
 
 [node name="Card27" parent="Cards" instance=ExtResource("1_ntnw3")]
-z_index = 9
-position = Vector2(749, 521)
+position = Vector2(691, 470)
 
 [node name="Card28" parent="Cards" instance=ExtResource("1_ntnw3")]
-z_index = 9
-position = Vector2(858, 522)
+position = Vector2(801, 470)
 
 [node name="Card29" parent="Cards" instance=ExtResource("1_ntnw3")]
-z_index = 9
-position = Vector2(962, 521)
+position = Vector2(911, 470)
 
 [node name="Card30" parent="Cards" instance=ExtResource("1_ntnw3")]
-z_index = 9
-position = Vector2(1065, 521)
+position = Vector2(1021, 470)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
